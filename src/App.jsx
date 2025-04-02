@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import Map, { Marker, Popup } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useState } from "react";
