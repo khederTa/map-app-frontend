@@ -67,7 +67,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/pins", data, {
+      const res = await axios.post("https://map-app-backend.onrender.com/api/pins", data, {
         headers: { "Content-Type": "multipart/form-data" },
         withCredentials: true,
       });
@@ -93,7 +93,7 @@ function App() {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/pins/${editingPin._id}`,
+        `https://map-app-backend.onrender.com/api/pins/${editingPin._id}`,
         data,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -114,7 +114,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/pins");
+        const response = await axios.get("https://map-app-backend.onrender.com/api/pins");
         const pinsData = Array.isArray(response.data)
           ? response.data
           : response.data.pins || [];
@@ -227,7 +227,7 @@ function App() {
                             )}
                             {/* Download button uses the dedicated download endpoint */}
                             <a
-                              href={`http://localhost:5000/api/media/${m._id}`}
+                              href={`https://map-app-backend.onrender.com/api/media/${m._id}`}
                               download={m.fileName}
                               className="secondaryButton"
                             >
